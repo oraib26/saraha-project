@@ -15,7 +15,7 @@ export const signupSchema = {
     }),
 
     query:joi.object({
-        test:joi.boolean().required()
+        test:joi.boolean(),
     })
 } 
 

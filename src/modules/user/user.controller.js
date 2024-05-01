@@ -1,7 +1,6 @@
 import userModel from "../../../models/User.model.js";
 
 export const deleteUser = async (req, res) => {
-  const { email } = req.body;
   const user = await userModel.deleteOne({ _id: req.userId });
   if (user.deletedCount > 0) {
     return res.json({ message: "success", user });

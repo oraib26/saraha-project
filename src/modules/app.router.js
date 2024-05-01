@@ -6,6 +6,9 @@ import MessageRouter from './message/message.router.js'
  const initApp = (app,express)=>{
     connectDB();
     app.use(express.json());
+    app.get('/',(req,res)=>{
+        return res.json({message : "welcome"})
+    })
     app.use('/auth',AuthRouter)
     app.use('/user',UserRouter)
     app.use('/message',MessageRouter)
